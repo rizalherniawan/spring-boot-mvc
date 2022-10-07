@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+</head>
+<body>
+    <div>
+        <form method="post" th:object="${grade}" th:action="@{/submit}">
+            <input type="text" placeholder="Name" th:field="${grade.name}">
+            <input type="text" placeholder="Subject" th:field="${grade.subject}">
+            <input type="text" placeholder="Score" th:field="${grade.score}">
+            <input type="hidden" th:field="${grade.id}">
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+</html>
